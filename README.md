@@ -5,8 +5,9 @@ A simple API for managing tasks.
 1. Clone the repository by using `git clone https://github.com/eiyaxz/task-manager.git`;
 2. Enter the repository's folder by using `cd task-manager`;
 3. Install the dependencies by using `npm install`;
-4. Run the server by using `npm run start`;
-5. Use a tool like [Insomnia](https://insomnia.rest) to test endpoints.
+4. Fill in the `.env` missing variables (see `.env.example` for reference)
+5. Run the server by using `npm run start`;
+6. Use a tool like [Insomnia](https://insomnia.rest) to test endpoints.
 
 ## endpoints ⛓️
 ### user endpoints 🧏
