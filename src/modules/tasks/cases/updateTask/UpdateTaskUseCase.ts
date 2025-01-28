@@ -22,6 +22,14 @@ export class UpdateTaskUseCase {
             throw new StatusError("Description is required", 404);
         }
 
+        if (description.length < 3) {
+            throw new StatusError("Description must have at least 3 characters", 400);
+        }
+
+        if (description.length > 255) {
+            throw new StatusError("Description must have at most 255 characters", 400);
+        }
+
         if (task.owner !== owner) {
             throw new StatusError("Forbidden", 403);
         }
