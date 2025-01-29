@@ -49,16 +49,6 @@ export class TaskRepository {
         return await this.tasks.find({ where: { owner } });
     }
 
-    async findTaskOwner(_id: string): Promise<User | null> {
-        const task = await this.findById(_id);
-
-        if (!task) {
-            return null;
-        }
-
-        return await database.getMongoRepository(User).findOne({ where: { _id: task.owner } });
-    }
-
     async delete(_id: string): Promise<void> {
         await this.tasks.delete({ _id });
     }
